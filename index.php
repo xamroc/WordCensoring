@@ -1,7 +1,13 @@
 <?php
+
+$find = array('bitch','fuck','shit');
+$replace = array('b***h','f**k','s**t');
 	
 if (isset($_POST['user_input']) && !empty($_POST['user_input'])) {
-	echo $user_input = $_POST['user_input'];
+	$user_input = $_POST['user_input'];
+	$user_input_censored = str_replace($find, $replace, $user_input);
+	
+	echo $user_input_censored;
 }
 	
 ?>
